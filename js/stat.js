@@ -17,8 +17,7 @@ window.renderStatistics = function (ctx, names, times) {
   var heightColumn = 150,
       widthColumn = 40,
       betweenColumns = 50,
-      colorMy = 'rgba(255, 0, 0, 1)',
-      colorOthers = 'blue';
+      colorMy = 'rgba(255, 0, 0, 1)';
   var maxTime = 0,
       maxWho;
   function countMaxTime(times) {
@@ -33,10 +32,11 @@ window.renderStatistics = function (ctx, names, times) {
   var indexMax = heightColumn/maxTime;
 
   function setColors(name) {
+    var colorOthers = 'rgba(0,0,255,0.' + (Math.random()*10).toFixed(0) + ')';
     return (name === 'Вы') ? colorMy : colorOthers;
   }
 
-  function drowColums(times,names) {
+  function drawColums(times,names) {
     for (var i = 0,w = 150; i < times.length; i++){
       ctx.fillStyle = 'black';
       ctx.fillText(names[i],w,70);
@@ -47,5 +47,5 @@ window.renderStatistics = function (ctx, names, times) {
       w = w + widthColumn + betweenColumns;
     }
   }
-  drowColums(times,names);
+  drawColums(times,names);
 };
