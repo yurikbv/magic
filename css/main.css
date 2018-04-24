@@ -1,8 +1,6 @@
 html,
 body {
-  margin: 0;
   padding: 0;
-
   min-width: 1024px;
   margin: 0 auto;
 
@@ -49,9 +47,7 @@ form {
   min-width: 200px;
 
   background-color: #414342;
-  border-color: black;
-  border-style: solid;
-  border-width: 2px;
+  border: black solid 2px;
 }
 
 .section-title {
@@ -429,7 +425,7 @@ footer p {
 }
 
 .review-form-title {
-  font-family: "PT Mono";
+  font-family: "PT Mono",sans-serif;
   text-align: left;
 }
 
@@ -448,8 +444,7 @@ footer p {
 }
 
 .review-form-group {
-  margin: 0;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
   padding: 0;
 
   border: 0;

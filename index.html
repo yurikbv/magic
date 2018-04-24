@@ -62,7 +62,7 @@
 
   <div class="demo"></div>
 
-  <div class="setup-open" tabindex="0">
+  <div class="setup-open">
     <img src="./img/user-1.jpg" class="setup-open-icon">
   </div>
 </header>
@@ -71,8 +71,7 @@
   <form class="setup-wizard-form"
         method="post"
         enctype="multipart/form-data"
-        autocomplete="off"
-        action="https://js.dump.academy/code-and-magick">
+        autocomplete="off">
 
     <div class="setup-title">
       <div class="setup-user">
@@ -83,18 +82,18 @@
         <label>
           <input type="text" name="username"
                  maxlength="25" required
-                 class="setup-user-name" value="Синий Пендальф" minlength="2"/>
+                 class="setup-user-name" value="Синий Пендальф"/>
         </label>
       </div>
 
-      <span class="setup-close" tabindex="0">&times;</span>
+      <span class="setup-close">&times;</span>
     </div>
 
 
     <div class="setup-artifacts-shop">
       <div class="setup-artifacts-cell"><img src="img/icon-star.png" alt="Star" width="65" height="50" draggable="true">
       </div>
-      <div class="setup-artifacts-cell"><img src="img/icon-star.png" alt="Star" width="65" height="50" draggable="true"></div>
+      <div class="setup-artifacts-cell"></div>
       <div class="setup-artifacts-cell"></div>
       <div class="setup-artifacts-cell"></div>
 
@@ -162,7 +161,8 @@
 </div>
 
 <footer>
-  <p><a href="http://htmlacademy.ru" class="footer-link"><img src="img/htmlacademy-logo.png" alt="HTML Academy" width="130">Сделано в HTML Academy</a>в 2017 году</p>
+  <p><a href="http://htmlacademy.ru" class="footer-link"><img src="img/htmlacademy-logo.png" alt="HTML Academy"
+                                                              width="130">Сделано в HTML Academy</a>в 2017 году</p>
 </footer>
 
 <template id="similar-wizard-template" style="display: none">
@@ -181,27 +181,22 @@
   </div>
 </template>
 <script>
-  var fireballSize = 22,
-      wizardSpeed = 3,
-      wizardWidth = 70;
+  var fireballSize = 22;
   var getFireballSpeed = function (left) {
-    return (left) ? 5 : 2 ;
+    return left ? 5 : 2 ;
   };
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
   var getWizardHeight = function () {
     return 1.337 * wizardWidth;
   };
   var getWizardX = function (width) {
-    return width/2 - wizardWidth;
+    return width/2 - wizardWidth/2;
   };
-  var getWizardY= function (height) {
+  var getWizardY = function (height) {
     return (height/3);
   }
 </script>
-
-<script src="js/stat.js"></script>
-<script src="js/setup.js"></script>
-<script src="js/popup.js"></script>
-<script src="js/move-setup.js"></script>
 <script src="js/game.js"></script>
 
 </body>
