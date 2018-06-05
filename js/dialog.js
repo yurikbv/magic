@@ -58,7 +58,6 @@
   });
 
   setupTitle.addEventListener('mousedown',function (event) {
-    event.preventDefault();
     var setupCoords = getCoords(setup);
     var shiftX = event.pageX - setupCoords.left;
     var shiftY = event.pageY - setupCoords.top;
@@ -82,7 +81,7 @@
       document.removeEventListener('mousemove',mouseMove);
       document.removeEventListener('mouseup',mouseUp)
     };
-    moveAt(event,shiftX,shiftY);
+    moveAt(event);
     document.addEventListener('mousemove',mouseMove);
     document.addEventListener('mouseup',mouseUp)
   });
